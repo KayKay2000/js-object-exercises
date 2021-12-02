@@ -38,7 +38,7 @@ return user.first +  " " + user.last;
 
 /**
  * Combining Properties with more data:
- * use the object data to return a string "Hello, FIRSTNAME LASTNAME!"
+ * use the object data to return a string "Hello, FirstName LastName!"
  * @param {User} user
  * @returns {string}
  */
