@@ -35,7 +35,7 @@ const user2 = {
  * @returns {string}
  */
 function level2exercise1(user) {
-
+return user.security.password;
 }
 
 /**
@@ -45,7 +45,7 @@ function level2exercise1(user) {
  * @returns {string}
  */
 function level2exercise2(user) {
-
+return user.name.first + " " + user.name.last
 }
 
 /**
@@ -55,6 +55,7 @@ function level2exercise2(user) {
  * @returns {string}
  */
 function level2exercise3(user) {
+  return user.name.first[0] + user.name.last[0]
 
 }
 
@@ -65,7 +66,10 @@ function level2exercise3(user) {
  * @returns {boolean}
  */
 function level2exercise4(user) {
-
+if (user.security.password.length >= 8)
+  return true;
+else
+  return false; 
 }
 
 /**
@@ -75,5 +79,10 @@ function level2exercise4(user) {
  * @returns {boolean}
  */
 function level2exercise5(user) {
-
+  const today = new Date();
+  const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  if (number(user.security.lastLogin) - number(date) > 30) 
+    return false
+  else 
+    return true
 }
