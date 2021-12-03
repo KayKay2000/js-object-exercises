@@ -39,8 +39,14 @@ const exampleProductArray = [
  * @returns {number}
  */
 function level3exercise1(products) {
-
+  let total = 0; 
+  for (let amount in exampleProductArray) {
+  total+= (exampleProductArray[amount].price)
+  
 }
+  return total
+}
+
 
 /**
  * Highest priced product
